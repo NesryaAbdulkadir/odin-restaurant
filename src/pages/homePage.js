@@ -9,7 +9,6 @@ export function homePage() {
   const heroHeading = document.createElement("h1");
   const heroParagraph = document.createElement("p");
   const heroImage = document.createElement("img");
-
   welcomeText.textContent = "Welcome to";
   heroHeading.textContent = "The Gourmet Bistro";
   heroParagraph.textContent = `We serve the finest dishes made from fresh, locally-sourced ingredients. Our talented chefs create culinary masterpieces that will delight your taste buds and leave you coming back for more.`;
