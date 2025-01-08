@@ -61,31 +61,25 @@ export function menuPage() {
       price: "$100",
     },
   ];
-
   const contentDiv = document.getElementById("content");
   const pageContainer = document.createElement("div");
   pageContainer.classList.add("page-container");
-
   const header = document.createElement("h1");
   header.classList.add("menu-header");
   header.textContent = "Menu";
   pageContainer.append(header);
-
   const menuContainer = document.createElement("div");
   menuContainer.classList.add("menu-container");
   const sideMenu = document.createElement("ul");
   sideMenu.classList.add("side-menu");
-
   const mainMenu = document.createElement("ul");
   mainMenu.classList.add("main-menu");
-
   MenuItem.forEach((item) => {
     const sideMenuItem = document.createElement("li");
     const button = document.createElement("button");
     sideMenuItem.append(button);
     button.innerText = item.name;
     sideMenu.append(button);
-
     button.addEventListener("click", () => {
       mainMenu.innerHTML = "";
       displayItems(item);
@@ -106,9 +100,7 @@ export function menuPage() {
     menuContainer.append(mainMenu);
   }
   displayItems(MenuItem[0]);
-
   menuContainer.append(sideMenu, mainMenu);
-
   pageContainer.append(menuContainer);
   contentDiv.append(pageContainer);
 }
